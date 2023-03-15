@@ -41,24 +41,26 @@ myBuhThreeButton.addEventListener('click', () => {
             myBall.classList.toggle('animateRight');
             myDirection = "Left";
 
-        }        
-        else {
-
-            myBall.classList.toggle('animateLeft');
-            myDirection = "Right";
-
         }
 
-        if (myDirection == "Up") {
-
-            myBall.classList.toggle('animateRight');
-            myDirection = "Down";
-
-        }        
-        else {
+        else if(myDirection == "Left"){
 
             myBall.classList.toggle('animateLeft');
             myDirection = "Up";
+
+        }
+
+        else if(myDirection == "Down") {
+
+            myBall.classList.toggle('animateDown');
+            myDirection = "Down";
+
+        }
+
+        else if(myDirection == "Up"){
+
+            myBall.classList.toggle('animateUp');
+            myDirection = "Right";
 
         }
 

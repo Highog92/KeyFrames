@@ -31,22 +31,22 @@
 
 @keyframes goUp {
   from {
-    right: 0px;
+    transform: translateY(0px) scale(0%);
   }
 
   to {
-    top: 500px;
+    transform: translateY(500px) scale(100%);
   }
 }
 
 
 @keyframes goDown {
   from {
-    right: 0px;
+    transform: translateY(0px) scale(0%);
   }
 
   to {
-    down: 500px;
+    transform: translateY(500px) scale(100%);
   }
 }
 
