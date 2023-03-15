@@ -1,79 +1,134 @@
 /*opgave 1*/
-#ballOne{
+#ballOne {
   background-color: rgb(5, 109, 19);
-color:antiquewhite;
-width: 100px;
-height: 100px;
-text-align: center;
-border-radius: 50px;
-margin: 1rem;
+  color: antiquewhite;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 1rem;
 
 
-animation-duration: 400ms;
-animation-timing-function: ease-out;
-animation-fill-mode: both;
+  animation-duration: 400ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 
 }
 
-.animateLeft{
+.animateDown{
+  animation-name: goDown;
+}
+
+
+.animateUp{
+  animation-name: goUp;
+}
+
+
+.animateLeft {
   animation-name: goLeft;
 }
 
-.animateRight{
+@keyframes goUp {
+  from {
+    right: 0px;
+  }
 
-  animation-name: goRight;
+  to {
+    top: 500px;
+  }
 }
 
 
+@keyframes goDown {
+  from {
+    right: 0px;
+  }
+
+  to {
+    down: 500px;
+  }
+}
+
+
+.animateRight {
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-duration: 500ms;
+  animation-name: goRight;
+}
+
+@keyframes goRight {
+  from {
+    right: 0px;
+  }
+
+  to {
+    right: 500px;
+  }
+}
 
 
 /*opgave 2*/
 
-.balls{
+.balls {
   background-color: rgb(241, 139, 6);
-color:antiquewhite;
-width: 100px;
-height: 100px;
-text-align: center;
-border-radius: 50px;
-margin: 1rem;
+  color: antiquewhite;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 1rem;
 
 
-animation-duration: 400ms;
-animation-timing-function: ease-out;
-animation-fill-mode: both;
+  animation-duration: 400ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 
 }
 
-.hardBalls{
+.hardBalls {
   background-color: rgb(155, 13, 13);
-color:antiquewhite;
-width: 100px;
-height: 100px;
-text-align: center;
-border-radius: 50px;
-margin: 1rem;
-
-
-animation-duration: 400ms;
-animation-timing-function: ease-out;
-animation-fill-mode: both;
-
+  color: antiquewhite;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 1rem;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
 
 
 
+@keyframes goRight {
+  0% {
+    transform: translateX(0px) scale(100%);
+  }
 
+  50% {
+    transform: translateX(500px) scale(25%);
+  }
 
-@keyframes goRight{
-  from {transform: translateX(0px)}
-  to {transform: translateX(500px)}
+  100% {
+    transform: translateX(0px) scale(100%);
+  }
 }
 
-@keyframes goLeft{
-  from {transform: translateX(0px)}
-  to {transform: translateX(-500px)}
-}
+@keyframes goLeft {
+  0% {
+    transform: translateX(0px) scale(100%);
 
-  
-  
+  }
+
+  50% {
+    transform: translateX(-500px) scale(25%);
+  }
+
+  100% {
+    transform: translateX(0px) scale(100%);
+  }
+
+}
